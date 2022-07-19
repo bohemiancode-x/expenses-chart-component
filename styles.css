@@ -1,0 +1,159 @@
+
+:root {
+    /* Colors */
+
+    /* Primary */
+
+--Soft-red: hsl(10, 79%, 65%);
+--Cyan: hsl(186, 34%, 60%);
+
+    /* Neutral */
+
+--Dark-brown: hsl(25, 47%, 15%);
+--Medium-brown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-pale-orange);
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.app {  
+    height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.topcard {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: var(--Cream);
+    margin-top: 4rem;
+    height: 10vh;
+    width: 90%;
+    padding: 20px;
+    background-color: var(--Soft-red);
+    display: flex;
+    justify-content: space-between;
+}
+.circles {
+    display: flex;
+    position: relative;
+}
+.circles span:first-child {
+    position: absolute;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 30px;
+    border: 2.7px solid var(--Cream);
+    background-color: transparent;
+    z-index: 1;
+    right: 1.5rem;
+}
+.circles span:last-child {
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 30px;
+    background-color: var(--Dark-brown);
+}
+.main-card {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;
+    background-color: white;
+}
+.main-card h1 {
+    font-size: 1.6rem;
+    margin: 10px;
+    color: var(--Dark-brown);
+}
+.main-card span {
+    display: flex;
+    margin: 10px auto;
+    width: 90%;
+    height: 2.5px;
+    background-color: var(--Cream);
+}
+.chart {
+    margin: 40px 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.chart li .amount {
+    visibility: hidden;
+    font-size: 0.8rem;
+    background-color: var(--Dark-brown);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.chart li:hover .amount {
+    visibility: visible;
+}
+.chart li span {
+    width: 2.3rem;
+    display: flex;
+    background-color: var(--Soft-red);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.chart li:nth-child(3) span {
+    background-color: var(--Cyan);
+}
+.chart li span:hover {
+    opacity: 60%;
+}
+.chart li p {
+    text-align: center;
+    opacity: 50%;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.total {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.total div:first-child p {
+    font-size: 1rem;
+    opacity: 50%;
+}
+.total div:last-child {
+    margin-top: auto;
+}
+.total div:last-child p:first-child {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: end;
+}
+.total div:last-child p:last-child {
+    opacity: 50%;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+    .main-card h1 {
+        font-size: 2rem;
+    }
+    .chart li span {
+        width: 3.5rem;
+    }
+    .chart li p {
+        font-size: 1.2rem;
+    }
+}
+
